@@ -101,7 +101,7 @@ const isMobileMenuOpen = ref(false)
 const navLinks = [
   { name: 'Home', href: '#hero' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Services', href: '#' },
+  { name: 'Services', href: '#services' },
   { name: 'Contact', href: '#contact' }
 ]
 

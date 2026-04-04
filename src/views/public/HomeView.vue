@@ -5,6 +5,7 @@
       <HeroSection />
       <ProjectsSection />
       <VisionSection />
+      <TestimonialSection />
       <TeamSection />
       <ContactSection />
     </main>
@@ -21,6 +22,7 @@ import VisionSection from '@/components/public/VisionSection.vue'
 import TeamSection from '@/components/public/TeamSection.vue'
 import ContactSection from '@/components/public/ContactSection.vue'
 import FooterSection from '@/components/public/FooterSection.vue'
+import TestimonialSection from '@/components/public/TestimonialSection.vue'
 
 onMounted(() => {
   const observer = new IntersectionObserver(entries => {

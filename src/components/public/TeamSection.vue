@@ -85,13 +85,6 @@ const team = [
     skills: ['Docker', 'CI/CD', 'Linux']
   },
   {
-    name: 'Jishan Tanchangya',
-    role: 'DevOps Engineer',
-    image: '/images/jishan.png',
-    bio: 'CI/CD pipeline specialist. Keeps our infrastructure reliable and scalable.',
-    skills: ['Docker', 'K8s', 'Linux']
-  },
-  {
     name: 'Mongthuinu Marma',
     role: 'UI/UX Designer',
     image: '/images/mongthuinu.png',
