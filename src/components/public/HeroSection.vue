@@ -9,19 +9,13 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         
         <div class="text-left order-1 flex flex-col items-start">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-6 md:mb-8">
-             <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-            </span>
-            Innovation in Motion
-          </div>
           
-          <h1 class="text-4xl sm:text-6xl xl:text-8xl font-black text-white leading-[1.1] tracking-tighter mb-6 md:mb-8">
-            Software <br class="hidden sm:block"/>
-            Solution With <br class="hidden sm:block"/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 italic">
-              Easy Steps
+          <h1 class="text-3xl sm:text-4xl xl:text-6xl font-black text-white leading-[1.1] tracking-tighter mb-6 md:mb-8">
+            Grow up your ideas
+            <br class="hidden sm:block"/>
+            with
+            <span class="text-transparent pe-2 bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 italic">
+              Softshine
             </span>
           </h1>
 
@@ -29,17 +23,17 @@
             Experience a frictionless path from ideation to deployment. We build robust digital ecosystems using a <span class="text-white font-medium underline decoration-cyan-500/30">streamlined workflow</span>.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button @click="scrollTo('#projects')" class="group relative overflow-hidden px-8 py-4 bg-cyan-500 text-black font-extrabold rounded-xl md:rounded-2xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] active:scale-95 flex items-center justify-center gap-3">
-              <span class="relative z-10">Our Projects</span>
-              <svg class="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="flex flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            <button @click="scrollTo('#projects')" class="flex-1 sm:flex-none group relative overflow-hidden px-4 sm:px-8 py-4 bg-cyan-500 text-black text-sm sm:text-base font-extrabold rounded-xl md:rounded-2xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] active:scale-95 flex items-center justify-center gap-2 sm:gap-3">
+              <span class="relative z-10">Projects</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
               <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
             </button>
 
-            <button @click="scrollTo('#demo')" class="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl md:rounded-2xl backdrop-blur-md hover:bg-white/10 hover:border-white/30 transition-all active:scale-95 flex items-center justify-center">
-              Request a Demo
+            <button @click="scrollTo('#contact')" class="flex-1 sm:flex-none px-4 sm:px-8 py-4 bg-white/5 border border-white/10 text-white text-sm sm:text-base font-bold rounded-xl md:rounded-2xl backdrop-blur-md hover:bg-white/10 hover:border-white/30 transition-all active:scale-95 flex items-center justify-center">
+              Contact
             </button>
           </div>
         </div>
@@ -76,7 +70,8 @@ const steps = [
 ]
 
 const scrollTo = (id) => {
-  document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+  const el = document.querySelector(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 
@@ -95,20 +90,19 @@ section {
   animation: shimmer 2s infinite;
 }
 
-/* Fluid animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-h1, p, .flex, .group {
+h1, p, .flex-row, .group {
   opacity: 0;
   animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 h1 { animation-delay: 0.1s; }
 p { animation-delay: 0.2s; }
-.flex { animation-delay: 0.3s; }
+.flex-row { animation-delay: 0.3s; }
 
 .group:nth-child(1) { animation-delay: 0.4s; }
 .group:nth-child(2) { animation-delay: 0.5s; }

@@ -1,5 +1,5 @@
 <template>
-  <section id="team" class="py-24 lg:py-32 relative overflow-hidden bg-[#020617]">
+  <section id="team" class="py-5 lg:py-8 relative overflow-hidden bg-[#020617]">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
       <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px]"></div>
       <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px]"></div>

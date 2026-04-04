@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="py-24 lg:py-32 relative overflow-hidden bg-[#020617]">
+  <section id="contact" class="py-5 lg:py-8 relative overflow-hidden bg-[#020617]">
     <div class="absolute inset-0 z-0 pointer-events-none">
       <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px]"></div>
       <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[120px]"></div>

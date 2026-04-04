@@ -1,5 +1,5 @@
 <template>
-  <section id="vision" class="py-24 lg:py-32 relative overflow-hidden bg-[#020617]">
+  <section id="vision" class="py-5 lg:py-8 relative overflow-hidden bg-[#020617]">
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none">
       <div class="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse"></div>
       <div class="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px]" style="animation-delay: 2s"></div>
