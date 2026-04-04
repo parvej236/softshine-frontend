@@ -61,7 +61,7 @@
               </a>
             </div>
           </nav>
-          <div class="mt-auto pt-2 border-t border-white/5 stagger-item">
+          <div class="mt-auto pt-2 border-t border-white/5 stagger-item mb-6">
             <p class="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-6">Get in touch</p>
 
             <div class="grid grid-cols-3 gap-3 mb-6">
