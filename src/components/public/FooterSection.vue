@@ -1,52 +1,85 @@
 <template>
-  <footer class="border-t border-slate-800/60 bg-slate-950/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <!-- Brand -->
-        <div class="md:col-span-2">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="relative w-9 h-9">
-              <div class="absolute inset-0 bg-cyan-500 rounded-lg rotate-45"></div>
-              <div class="absolute inset-1 bg-slate-950 rounded-md rotate-45"></div>
-              <span class="absolute inset-0 flex items-center justify-center text-cyan-400 font-display font-bold text-sm">S</span>
+  <footer class="relative border-t border-white/5 bg-[#020617] overflow-hidden">
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+        
+        <div class="lg:col-span-5 space-y-8">
+          <div class="flex items-center gap-3">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-cyan-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              <img src="/logo_softshine.png" alt="SoftShine Logo" class="relative w-10 h-10 rounded-xl shadow-2xl">
             </div>
-            <span class="font-display font-bold text-xl text-white">Soft<span class="text-cyan-400">Shine</span></span>
+            <span class="font-black text-2xl tracking-tighter text-white">
+              Soft<span class="text-cyan-500">Shine</span>
+            </span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-xs mb-6">
-            Crafting digital excellence through innovative software solutions.
-            Building the future, one line of code at a time.
+          
+          <p class="text-slate-400 text-base leading-relaxed max-w-sm font-medium">
+            We engineer high-performance digital experiences. From startups to scale-ups, we turn complex visions into elegant software.
           </p>
-          <div class="flex gap-3">
-            <a v-for="social in socials" :key="social.name" :href="social.href"
-               class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-cyan-500/20 border border-slate-700 hover:border-cyan-500/40 flex items-center justify-center text-slate-400 hover:text-cyan-400 transition-all duration-300">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" v-html="social.icon"></svg>
-            </a>
+
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-500/5 border border-emerald-500/20">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400">Available for new projects</span>
           </div>
         </div>
 
-        <!-- Links -->
-        <div>
-          <h3 class="font-display font-semibold text-white mb-5">Company</h3>
-          <ul class="space-y-3">
-            <li v-for="link in companyLinks" :key="link.label">
-              <a :href="link.href" class="text-slate-400 hover:text-cyan-400 text-sm transition-colors">{{ link.label }}</a>
-            </li>
-          </ul>
-        </div>
+        <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div>
+            <h3 class="text-white text-[11px] font-black uppercase tracking-[0.3em] mb-8 opacity-50">Navigation</h3>
+            <ul class="space-y-4">
+              <li v-for="link in companyLinks" :key="link.label">
+                <a :href="link.href" class="group flex items-center text-slate-400 hover:text-cyan-400 text-sm font-bold transition-all">
+                  <span class="w-0 group-hover:w-4 h-[1px] bg-cyan-500 transition-all mr-0 group-hover:mr-2"></span>
+                  {{ link.label }}
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <h3 class="font-display font-semibold text-white mb-5">Services</h3>
-          <ul class="space-y-3">
-            <li v-for="service in services" :key="service">
-              <span class="text-slate-400 text-sm">{{ service }}</span>
-            </li>
-          </ul>
+          <div>
+            <h3 class="text-white text-[11px] font-black uppercase tracking-[0.3em] mb-8 opacity-50">Expertise</h3>
+            <ul class="space-y-4">
+              <li v-for="service in services" :key="service" class="text-slate-400 text-sm font-bold flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+                {{ service }}
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-span-2 md:col-span-1">
+            <h3 class="text-white text-[11px] font-black uppercase tracking-[0.3em] mb-8 opacity-50">Follow Us</h3>
+            <div class="flex flex-wrap gap-3">
+              <a v-for="social in socials" :key="social.name" :href="social.href"
+                 :aria-label="social.name"
+                 class="w-11 h-11 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-cyan-500 hover:border-cyan-400 transition-all duration-500 shadow-xl group">
+                <svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24" v-html="social.icon"></svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-slate-800/60">
-        <p class="text-slate-500 text-sm">© {{ new Date().getFullYear() }} SoftShine. All rights reserved.</p>
-        <p class="text-slate-500 text-sm">Built with ❤️ in Chittagong, Bangladesh</p>
+      <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6">
+          <p class="text-slate-500 text-[11px] font-bold tracking-wider">
+            © {{ new Date().getFullYear() }} SOFTSHINE.
+          </p>
+          <div class="hidden md:block w-1 h-1 rounded-full bg-slate-800"></div>
+          <p class="text-slate-500 text-[11px] font-bold tracking-wider uppercase">
+            Crafted with Precision in Chittagong
+          </p>
+        </div>
+
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-slate-600 hover:text-slate-400 text-[10px] font-black uppercase tracking-widest transition-colors">Privacy Policy</a>
+          <a href="#" class="text-slate-600 hover:text-slate-400 text-[10px] font-black uppercase tracking-widest transition-colors">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -55,11 +88,20 @@
 <script setup>
 const socials = [
   { name: 'GitHub', href: '#', icon: '<path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>' },
-  { name: 'LinkedIn', href: '#', icon: '<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>' }
+  { name: 'LinkedIn', href: '#', icon: '<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>' },
+  { name: 'Twitter', href: '#', icon: '<path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>' }
 ]
 const companyLinks = [
-  { label: 'About Us', href: '#vision' }, { label: 'Projects', href: '#projects' },
-  { label: 'Team', href: '#team' }, { label: 'Contact', href: '#contact' }
+  { label: 'Our Story', href: '#vision' }, { label: 'Case Studies', href: '#projects' },
+  { label: 'Our Talent', href: '#team' }, { label: 'Start Project', href: '#contact' }
 ]
-const services = ['Web Development', 'Mobile Apps', 'API Integration', 'UI/UX Design', 'DevOps & Cloud']
+const services = ['Web Engineering', 'Mobile Architecture', 'Scalable Cloud', 'Brand Strategy', 'Product Design']
 </script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+footer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+</style>
