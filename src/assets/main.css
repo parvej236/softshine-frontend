@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Dark Mode Styles */
+html.dark {
+  @apply bg-slate-950 text-white;
+}
+
+html.dark body {
+  @apply bg-slate-950;
+}
+
+html.dark main {
+  @apply bg-slate-950;
+}
+
+/* Ensure all sections have dark background */
+html.dark section {
+  @apply bg-slate-950;
+}
+
+/* Dark mode button styles */
+html.dark .btn-primary {
+  @apply bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-semibold;
+}
+
+html.dark .btn-outline {
+  @apply border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10;
+}
+
+html.dark .btn-ghost {
+  @apply text-slate-400 hover:text-white hover:bg-slate-800/50;
+}
+
