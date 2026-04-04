@@ -60,30 +60,37 @@ const team = [
   {
     name: 'M Parvej Alam',
     role: 'Founder & CEO',
-    image: 'https://i.pravatar.cc/300?img=11',
+    image: '/images/me.jpg',
     bio: 'Full-stack architect with 5+ years of enterprise software experience. CUET graduate.',
     skills: ['Vue.js', 'Spring Boot', 'AWS']
   },
   {
-    name: 'Rafiq Ahmed',
-    role: 'Lead Backend Engineer',
-    image: 'https://i.pravatar.cc/300?img=12',
-    bio: 'Microservices specialist. Built systems handling millions of transactions daily.',
-    skills: ['Java', 'Kubernetes', 'PostgreSQL']
+    name: 'Nurun Nobi Rayhan',
+    role: 'Marketing Lead',
+    image: '/images/nur.jpg',
+    bio: 'Growth hacker and brand strategist. Turns data into compelling stories that drive engagement.',
+    skills: ['SEO', 'Content Strategy', 'Analytics']
   },
   {
-    name: 'Nadia Islam',
-    role: 'UI/UX Designer',
-    image: 'https://i.pravatar.cc/300?img=47',
-    bio: 'Crafts interfaces that users love. Obsessed with motion design and design systems.',
-    skills: ['Figma', 'Tailwind', 'Motion']
-  },
-  {
-    name: 'Karim Hossain',
+    name: 'M Badshah Faisal',
     role: 'DevOps Engineer',
-    image: 'https://i.pravatar.cc/300?img=13',
+    image: '/images/badshah.png',
     bio: 'CI/CD pipeline specialist. Keeps our infrastructure reliable and scalable.',
     skills: ['Docker', 'CI/CD', 'Linux']
+  },
+  {
+    name: 'Jishan Tanchangya',
+    role: 'DevOps Engineer',
+    image: '/images/jishan.png',
+    bio: 'CI/CD pipeline specialist. Keeps our infrastructure reliable and scalable.',
+    skills: ['Docker', 'CI/CD', 'Linux']
+  },
+  {
+    name: 'Mongthuinu Marma',
+    role: 'UI/UX Designer',
+    image: '/images/mongthuinu.png',
+    bio: 'Crafts intuitive interfaces and delightful user experiences. Passionate about design systems.',
+    skills: ['Figma', 'Adobe XD', 'User Research']
   }
 ]
 </script>
