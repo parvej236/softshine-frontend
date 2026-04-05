@@ -28,10 +28,10 @@
       </div>
 
       <div class="flex items-center gap-3 md:gap-6">
-        <router-link to="/login"
-          class="px-5 py-2 md:px-6 md:py-2.5 bg-cyan-500 text-black text-[10px] md:text-xs font-black rounded-xl hover:bg-cyan-400 transition-all active:scale-95 shadow-[0_0_20px_rgba(6,182,212,0.3)] uppercase tracking-widest">
-          Login
-        </router-link>
+        <a href="#contact" @click.prevent="scrollTo('#contact')"
+          class="px-5 py-2 md:px-6 md:py-2.5 bg-cyan-500 text-black text-[10px] md:text-xs font-black rounded-xl hover:bg-cyan-400 transition-all active:scale-95 shadow-[0_0_20px_rgba(6,182,212,0.3)] uppercase tracking-widest cursor-pointer">
+          Get Started
+        </a>
 
         <button @click="toggleMenu" class="md:hidden text-white p-2 focus:outline-none" aria-label="Toggle Menu">
           <div class="w-6 flex flex-col items-end gap-1.5">
